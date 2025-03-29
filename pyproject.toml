@@ -1,0 +1,10 @@
+[tool.ruff]
+line-length = 88  # Ajusta según tu preferencia
+target-version = "py39"  # Ajusta según la versión de Python que uses
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]  # E y F son de Flake8, I es de isort para ordenar imports
+
+[tool.ruff.format]
+quote-style = "double"  # Opcional, elige 'double' o 'single' para comillas
+indent-style = "space"   # 'space' o 'tab' según prefieras
