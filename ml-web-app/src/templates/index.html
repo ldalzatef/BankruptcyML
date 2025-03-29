@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despliegue del Modelo</title>
+</head>
+<body>
+    <h1>Predicción con el Modelo</h1>
+    <form action="/predict" method="post">
+        <!-- Generar un campo para cada columna -->
+        {% for col in columns %}
+        <label for="{{ col }}">{{ col }}</label>
+        <input type="number" id="{{ col }}" name="{{ col }}" step="any" required><br>
+        {% endfor %}
+        <button type="submit">Predecir</button>
+    </form>
+    <h2>{{ prediction }}</h2>
+</body>
+</html>
